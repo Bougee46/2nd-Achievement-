@@ -50,3 +50,14 @@ let pokemonList = [
     {name: "Blastoise", height: '5', type: ['water, water'] },
     {name: "Onix", height: '28', type: ['Rock', 'ground'] }
  ]
+
+
+let day = 'sunday'
+
+ if (day === 'sunday') {
+    console.log('You have Work tomorrow!');
+  } else if (day === 'saturday') {
+    console.log("Its's Weekens! Yay!");
+  } else {
+    console.log("It's not Weekend! Boo!");
+  }
