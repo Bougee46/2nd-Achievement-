@@ -2,6 +2,12 @@
 /*first achivment 
 carrer foundry*/
 
+alert('Hello World!');
+
+let favoritFruit = 'Mango';
+document.write(favoritFruit);
+
+
 let myName = 'Bryan';
 // document.write(myName);
 myName = 'Carla';
