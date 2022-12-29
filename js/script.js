@@ -2,10 +2,10 @@
 // /*first achivment 
 // carrer foundry*/
 
-// alert('Hello World!');
+alert('Hello World!');
 
-// let favoritFruit = 'Mango';
-// document.write(favoritFruit);
+let favoritFruit = 'Mango';
+document.write(favoritFruit);
 
 
 // let myName = 'Bryan';
@@ -44,6 +44,34 @@
 // console.log(`${message} my name is ${name} and I'm ${age} Years old!`)
 
 
+
+// let day = 'sunday'
+
+//  if (day === 'sunday') {
+//     console.log('You have Work tomorrow!');
+//   } else if (day === 'saturday') {
+//     console.log("Its's Weekens! Yay!");
+//   } else {
+//     console.log("It's not Weekend! Boo!");
+//   }
+
+//   let age = 20;
+//   let result = age > 19 ? 'Is not a teen' : 'Is a teen';
+//   console.log(result); // Is not a teen
+  
+
+// for (let i = 1; i <= 5; i++) {
+//     console.log(i)
+// }
+
+// let ages = [20, 30, 25, 22, 31];
+// for (let i = 0; i < ages.length; i++) {
+//     console.log(ages[i] - 2);
+
+// }
+
+
+
 let pokemonList = [
     {name: "Venusaur", height: '6', type: ['grass', 'poison'] },
     {name: "Charizard", height: '5', type: ['fire', 'flying'] },
@@ -51,13 +79,6 @@ let pokemonList = [
     {name: "Onix", height: '28', type: ['Rock', 'ground'] }
  ]
 
-
-let day = 'sunday'
-
- if (day === 'sunday') {
-    console.log('You have Work tomorrow!');
-  } else if (day === 'saturday') {
-    console.log("Its's Weekens! Yay!");
-  } else {
-    console.log("It's not Weekend! Boo!");
-  }
+ for (let pokemon in pokemonList) {
+    console.log(pokemon);
+ }
