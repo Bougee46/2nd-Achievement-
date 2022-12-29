@@ -4,7 +4,7 @@
 
 alert('Hello World!');
 
-let favoritFruit = 'Mango';
+let favoritFruit = 'Mango <br>';
 document.write(favoritFruit);
 
 
@@ -73,12 +73,38 @@ document.write(favoritFruit);
 
 
 let pokemonList = [
-    {name: "Venusaur", height: '6', type: ['grass', 'poison'] },
-    {name: "Charizard", height: '5', type: ['fire', 'flying'] },
-    {name: "Blastoise", height: '5', type: ['water, water'] },
-    {name: "Onix", height: '28', type: ['Rock', 'ground'] }
+    {
+      name: "Venusaur", 
+      height: '6', 
+      type: ['grass, poison'] 
+   },
+    {
+      name: "Charizard", 
+      height: '5', 
+      type: ['fire, flying'] 
+   },
+    {
+      name: "Blastoise", 
+      height: '5', 
+      type: ['water, water'] 
+   },
+    {
+      name: "Onix", 
+      height: '28', 
+      type: ['rock ,ground'] 
+   }
  ]
 
- for (let pokemon in pokemonList) {
-    console.log(pokemon);
- }
+//  for (let pokemon of pokemonList.entries()) {
+//     console.log(`${pokemon[0]} => ${pokemon[1]}`);
+//  }
+
+for (let i = 0;
+   i < pokemonList.length; i++) {
+   if (pokemonList[i].height > 6) {
+       document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].type + " type! It's the largest!<br>")
+   }
+   else {
+       document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].type + " type!<br>")
+   }
+}
