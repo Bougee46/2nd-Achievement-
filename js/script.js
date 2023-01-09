@@ -72,39 +72,101 @@ document.write(favoritFruit);
 
 
 
-let pokemonList = [
+/*let pokemonList = [
     {
       name: "Venusaur", 
       height: '6', 
-      type: ['grass, poison'] 
+      types: ['grass, poison'] 
    },
     {
       name: "Charizard", 
       height: '5', 
-      type: ['fire, flying'] 
+      types: ['fire, flying'] 
    },
     {
       name: "Blastoise", 
       height: '5', 
-      type: ['water, water'] 
+      types: ['water, water'] 
    },
     {
       name: "Onix", 
       height: '28', 
-      type: ['rock ,ground'] 
+      types: ['rock ,ground'] 
    }
  ]
 
-//  for (let pokemon of pokemonList.entries()) {
-//     console.log(`${pokemon[0]} => ${pokemon[1]}`);
-//  }
-
-for (let i = 0;
-   i < pokemonList.length; i++) {
+/*
+/*for (let i = 0; i < pokemonListn.length; i++) {
    if (pokemonList[i].height > 6) {
        document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].type + " type! It's the largest!<br>")
    }
    else {
        document.write(pokemonList[i].name + " is " + pokemonList[i].height + " feet tall and it is a " + pokemonList[i].type + " type!<br>")
    }
+}*/
+/*
+//For Each Funktion
+pokemonList.forEach(function(pokemon){
+   console.log(pokemon.name + 'is ' + pokemon.height + ' feet tall.');
+});
+
+//Arrow Function
+pokemonList.forEach( pokemon => console.log(pokemon.name))
+
+//object.keys
+let carla = {
+   name: 'Carla',
+   age: 19,
+   children: [],
+   heigt: 5
 }
+
+Object.keys(carla).forEach(function(vision){
+   document.write(vision + ': ' + carla[vision] + '<br>');
+})
+*/
+let pokemonRepository = (function () {
+
+   let pokemonList = [
+      {
+         name: "Venusaur", 
+         height: '6', 
+         types: ['grass, poison'] 
+      },
+       {
+         name: "Charizard", 
+         height: '5', 
+         types: ['fire, flying'] 
+      },
+       {
+         name: "Blastoise", 
+         height: '5', 
+         types: ['water, water'] 
+      },
+       {
+         name: "Onix", 
+         height: '28', 
+         types: ['rock ,ground'] 
+      }
+   ];
+
+   function add(pokemon) {
+       if (typeof pokemon === 'object' && pokemon.name && pokemon.height && pokemon.type && Object.keys(pokemon).length === 3) {
+           pokemonList.push(pokemon);
+       } else {
+           return (`${pokemon} is not a Pokémon. Pokémon must be an object with the keys name, height and type`);
+       }
+   }
+
+   function getAll() {
+       return pokemonList
+   }
+
+   return {
+       add: add,
+       getAll: getAll
+
+   };
+
+})();
+
