@@ -35,14 +35,30 @@ console.log(pokemonRepository.getAll());
 
 
 
-var Pikachu = {
-   name: "Pikachu", 
-   height: '10', 
-   types: ['electric , thunder'] 
-}
+let pokemonList1 = [
+   {
+      name: "Venusaur", 
+      height: '6', 
+      types: ['grass, poison'] 
+   },
+    {
+      name: "Charizard", 
+      height: '5',  
+      types: ['fire, flying'] 
+   },
+    {
+      name: "Blastoise", 
+      height: '5', 
+      types: ['water, water'] 
+   },
+   {
+      name: "Onix", 
+      height: '28', 
+      types: ['rock ,ground'] 
+   }
+];
 
-console.log(Pikachu.name)
 
-
-
-
+pokemonList1.forEach(function(pokemon){
+   document.write(pokemon.name + 'is ' + pokemon.height + ' feet tall.');
+});
