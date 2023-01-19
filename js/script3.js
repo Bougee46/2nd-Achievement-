@@ -1,3 +1,5 @@
+
+
 const pokemonList = [
     {
        name: "Venusaur", 
@@ -20,7 +22,6 @@ const pokemonList = [
        types: ['rock ,ground'] 
     }
  ];
- 
 const ul_node = document.querySelector("ul.pokemon-list"); 
 
 function addListItem(pokemon){
