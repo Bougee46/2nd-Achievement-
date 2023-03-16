@@ -18,7 +18,9 @@ let pokemonRepository = (function () {
    }
    
    function addListener(someButton,pokemon){
-      someButton.addEventListener("click", function () { showDetails(pokemon); showModal(pokemon.name, 'Ich bin ein Pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png'); }, false);
+      someButton.addEventListener("click", function () { 
+        showDetails(pokemon);
+        showModal(pokemon.name, 'Ich bin ein Pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png'); }, false);
    }
    
    function showDetails(pokemon){
