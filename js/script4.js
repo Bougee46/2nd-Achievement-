@@ -69,9 +69,9 @@ function showModal() {
   modalContainer.classList.add('is-visible');
 }
 
-// document.querySelector('#pokemon-list').addEventListener('click', () => {
-//   showModal('titel', 'text', '');
-// });
+document.querySelector('#pokemon-list').addEventListener('click', () => {
+  showModal('titel', 'text', '');
+});
 
 function showModal(title, text, image) {
   let modalContainer = document.querySelector('#modal-container');
@@ -110,9 +110,9 @@ function showModal(title, text, image) {
 });
 }
 
-// document.querySelector('#pokemon-list').addEventListener('click', () => {
-//   showModal('$pokemon.name', '$pokemon.height');
-// });
+document.querySelector('#pokemon-list').addEventListener('click', () => {
+  showModal('$pokemon.name', '$pokemon.height');
+});
 
 function hideModal() {
   let modalContainer = document.querySelector('#modal-container');
