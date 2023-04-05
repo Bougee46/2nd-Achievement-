@@ -9,7 +9,7 @@ let pokemonRepository = (function () {
     let $button = $("<button>").text(pokemon.name).addClass("poke-button");
     $button.on("click", function () {
       showDetails(pokemon);
-      showModal(pokemon.name, 'Ich bin ein Pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png');
+      showModal(pokemon.name, 'Pokemon', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png');
     });
 
     $listItem.append($button);
