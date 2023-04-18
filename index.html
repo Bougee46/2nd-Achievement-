@@ -6,60 +6,34 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta name="discribtion" content="simple app">
     <meta name="author" content="Bryan Enehizena">
-    <title>First JS App</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/style.css">
     <link rel="icon" href="#">
+    <title>Pokemon-Liste</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-  <ul class="pokemon-list"></ul>
-  <!--Start Pokémon Modal-->
-  <div id="modal-container">
-    <div class="modal">
-      <button class="modal-close">x</button>
-      <div class="pokedex">
-        <div class="left-panel">
-          <div class="top-panel">
-            <div class="light big-light"></div>
-            <div class="light small-light small-light__red"></div>
-            <div class="light small-light small-light__yellow"></div>
-            <div class="light small-light small-light__green"></div>
+  <body>
+    <h1>Pokemon-Liste</h1>
+    <ul class="list-group pokemon-list">
+      <!-- Hier werden die Pokemons angezeigt -->
+    </ul>
+    
+    <!-- Modal-Fenster für einzelne Pokemons -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="bottom-panel">
-            <div class="screen-frame">
-              <div class="screen image-screen">
-                <img class="pokemon-image">
-              </div><!--Close image-screen-->
-            </div><!--Close screen-frame-->
-          </div><!--Close bottom-panel-->
-        </div> <!--Close left-panel-->
-        <div class="right-panel">
-          <div class="top-panel invisible-panel"></div>
-          <div class="bottom-panel">
-            <div class="data-screens">
-              <div class="screen name-screen">
-                <h2 class="pokemon-id"></h2>
-                <h2 class="pokemon-name"></h2>
-              </div>
-              <div class="small-screens">
-                <div class="screen height-screen">
-                  <h3>Height:</h3>
-                  <p class="pokemon-height"></p>
-                </div>
-                <div class="screen types-screen">
-                  <h3>Types:</h3>
-                  <ul class="pokemon-types"></ul>
-                </div>
-              </div> <!--Close small-screens-->
-            </div> <!-- Close data-screens-->
-          </div> <!--Close bottom-panel-->
-        </div> <!--Close right-panel-->
-      </div> <!--Close pokedex-->
-    </div> <!--Close modal-->
-  </div> <!--Close modal-container-->
-  <!--End Pokémon Modal-->
-  <script src="js/promise-pollyfill.js"></script>
-  <script src="js/fetch-pollyfill.js"></script>
-  <script src="js/script5.js"></script>
-</body>
-</html>
+          <div class="modal-body">
+            <img src="" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script6.js"></script>
