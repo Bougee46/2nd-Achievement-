@@ -29,10 +29,22 @@ $(document).ready(function() {
         success: function(data) {
           var pokemonName = data.name;
           var pokemonImage = data.sprites.front_default;
+          var pokemonWeight = data.weight;
+          var pokemonHeight = data.height;
+          var pokemonAbyList = data.abilities;
+          var pokemonAbyListHtml = "";
+
+          $.each(pokemonAbyList, function(index, value) {
+            console.log("index: " + index + " Wert: " + value.ability.name);
+            pokemonAbyListHtml += '<li class="list-group-item">' + value.ability.name + '</li>';
+            });
 
           $("#modal .modal-title").text(pokemonName);
           $("#modal .modal-body img").attr("src", pokemonImage);
-
+          $("#gewicht").text(pokemonWeight);
+          $("#groesse").text(pokemonHeight);
+          $(".pokemon-Abylist").html(pokemonAbyListHtml);
+          debugger;
           $("#modal").modal("show");
         }
       });
