@@ -41,10 +41,9 @@ $(document).ready(function() {
 
           $("#modal .modal-title").text(pokemonName);
           $("#modal .modal-body img").attr("src", pokemonImage);
-          $("#gewicht").text(pokemonWeight);
-          $("#groesse").text(pokemonHeight);
+          $("#gewicht").text('Weight: ' + pokemonWeight);
+          $("#groesse").text('Height: ' + pokemonHeight);
           $(".pokemon-Abylist").html(pokemonAbyListHtml);
-          debugger;
           $("#modal").modal("show");
         }
       });
